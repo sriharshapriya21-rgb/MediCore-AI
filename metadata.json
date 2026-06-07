@@ -1,0 +1,6 @@
+{
+  "name": "MediCore AI – Enterprise Healthcare Intelligence Platform",
+  "description": "Enterprise Healthcare Intelligence Platform including JWT secure role portals, clinical dashboards, Recharts analytics, WebRTC telemedicine, and Gemini-based medical triage integrations.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

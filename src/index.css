@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-900: #134e4a;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+html, body {
+  background-color: #030712;
+  color: #f8fafc;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Dark Layout */
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+/* Animations for premium HealthTech design */
+@keyframes patientPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.4;
+  }
+}
+
+@keyframes ecgMotion {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-12px) translateX(6px);
+  }
+}
+
+@keyframes heartbeatFlash {
+  0%, 100% {
+    opacity: 0.35;
+    filter: drop-shadow(0 0 1px rgba(56, 189, 248, 0.2));
+  }
+  30% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6));
+  }
+}
+
+@keyframes medicalRadar {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.pulse-glow {
+  animation: patientPulse 3s infinite ease-in-out;
+}
+
+/* ECG Line Class */
+.ecg-line {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: ecgMotion 15s linear infinite;
+}
+
+/* Floating Node Classes */
+.floating-node-1 {
+  animation: floatParticle 8s infinite ease-in-out;
+}
+
+.floating-node-2 {
+  animation: floatParticle 11s infinite ease-in-out -3s;
+}
+
+.floating-node-3 {
+  animation: floatParticle 14s infinite ease-in-out -6s;
+}
+
+/* Pulse alert ring */
+.radar-ring {
+  animation: medicalRadar 5s infinite cubic-bezier(0, 0, 0.2, 1);
+}
+
+.heartbeat-led {
+  animation: heartbeatFlash 2s infinite ease-in-out;
+}
+
+/* Premium micro-shadows & glassmorphism */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.glass-panel-light {
+  background: rgba(30, 41, 59, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   TRUE B2B ENTERPRISE CLINICAL DARK THEME OVERRIDES
+   ========================================== */
+
+/* Universal Clinical Layouts and Cards (Forcing #0B1220 background and #ffffff text inside dark mode) */
+.dark {
+  background-color: #0B1220 !important;
+  color: #ffffff !important;
+}
+
+/* Hardcoded white cards reset to rich Enterprise Slate-900 B2B standard */
+.dark .bg-white,
+.dark .bg-slate-[50],
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+.dark .bg-slate-150,
+.dark [class*="bg-white"] {
+  background-color: #172033 !important;
+}
+
+/* Core Header Branding and Subtitle forcing 100% visibility under all conditions */
+#core-brand-title {
+  color: #0F172A !important;
+  opacity: 1.0 !important;
+  font-weight: 900 !important;
+}
+.dark #core-brand-title {
+  color: #ffffff !important;
+  opacity: 1.0 !important;
+  font-weight: 950 !important;
+}
+
+#core-brand-subtitle {
+  color: #475569 !important;
+  opacity: 1.0 !important;
+  font-weight: 800 !important;
+}
+.dark #core-brand-subtitle {
+  color: #ffffff !important;
+  opacity: 1.0 !important;
+  font-weight: 850 !important;
+}
+
+/* Input Fields and Controls locked to deep medical terminal dark */
+.dark input[type="text"],
+.dark input[type="password"],
+.dark input[type="email"],
+.dark input[type="number"],
+.dark input[type="search"],
+.dark input[type="tel"],
+.dark input[type="date"],
+.dark textarea,
+.dark select {
+  background-color: #0b1220 !important;
+  border-color: #334155 !important;
+  color: #ffffff !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #0ea5e9 !important; /* Premium Cyan focus */
+  box-shadow: 0 0 0 1px #0ea5e9 !important;
+  outline: none !important;
+}
+
+/* Custom presets, pill buttons, other list styles */
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+.dark .hover\:bg-slate-100:hover,
+.dark .hover\:bg-slate-50:hover,
+.dark .hover\:bg-slate-200:hover,
+.dark .bg-slate-100\/50 {
+  background-color: #1e293b !important;
+}
+
+/* Borders conversion to clean B2B Enterprise Slate-800 standard */
+.dark .border-slate-100,
+.dark .border-slate-[150],
+.dark .border-slate-150,
+.dark .border-slate-200,
+.dark .border-slate-[200],
+.dark .border-slate-205,
+.dark .border-slate-250,
+.dark .border-slate-300,
+.dark .border-slate-800\/60,
+.dark .divide-slate-100 > * {
+  border-color: #1e293b !important;
+}
+
+/* Primary High-Contrast Titles (WCAG AA Compliant White) */
+.dark .text-slate-900,
+.dark .text-slate-850,
+.dark .text-slate-800,
+.dark .text-slate-705,
+.dark .text-slate-700,
+.dark .text-slate-750,
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5 {
+  color: #ffffff !important;
+}
+
+/* Secondary High-Contrast Information (WCAG AA Compliant Slate-300) */
+.dark .text-slate-650,
+.dark .text-slate-600,
+.dark .text-slate-550,
+.dark .text-slate-500,
+.dark .text-slate-450,
+.dark .text-slate-400 {
+  color: #cbd5e1 !important; /* Clear readable B2B grey */
+}
+
+/* Highlights text readability adjustments */
+.dark .text-slate-300 {
+  color: #f1f5f9 !important;
+}
+
+/* Ensure branding labels and platform subtitle are high contrast and clear */
+.dark label,
+.dark .font-mono {
+  color: #cbd5e1 !important;
+  opacity: 1.0 !important;
+}
+
+/* Healthcare blue & cyan highlights */
+.dark .text-indigo-600,
+.dark .text-indigo-650,
+.dark .text-indigo-700,
+.dark .text-indigo-755,
+.dark .text-indigo-800 {
+  color: #38bdf8 !important; /* Sky Blue/Cyan clinical text highlight */
+}
+
+.dark .bg-indigo-50,
+.dark .bg-indigo-100,
+.dark .bg-indigo-650\/10 {
+  background-color: rgba(6, 182, 212, 0.1) !important; /* Cyan transparency */
+}
+
+.dark .border-indigo-105,
+.dark .border-indigo-120,
+.dark .border-indigo-505\/20,
+.dark .border-indigo-900\/50 {
+  border-color: rgba(6, 182, 212, 0.25) !important;
+}
+
+/* MAIN CLINICAL BLUE ACTIONS (Ensuring proper B2B healthcare blue actions, not excessive purple) */
+.dark .bg-indigo-600,
+.dark .bg-indigo-650,
+.dark .bg-indigo-550,
+.dark .bg-indigo-750,
+.dark .bg-indigo-700 {
+  background-color: #2563eb !important; /* Clean Clinical Blue */
+  color: #ffffff !important;
+}
+
+.dark .hover\:bg-indigo-700:hover,
+.dark .hover\:bg-indigo-600:hover,
+.dark .hover\:bg-indigo-550:hover {
+  background-color: #1d4ed8 !important; /* Deep Healthcare Blue on hover */
+}
+
+/* SELECTED ACTIONS (Purple is strictly for selected active highlights/selected tabs) */
+.dark .bg-indigo-950,
+.dark .bg-indigo-955,
+.dark .bg-slate-[150] {
+  background-color: #4c1d95 !important; /* Deep Royal Purple Selected Tab Background */
+  border-color: #8b5cf6 !important;
+  color: #ffffff !important;
+}
+
+.dark .text-indigo-305 {
+  color: #c084fc !important; /* Light violet/purple text for selected tabs */
+}
+
+/* Adjust timeline active elements and other selected badges */
+.dark .bg-emerald-50,
+.dark .bg-emerald-100 {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+}
+.dark .text-emerald-600,
+.dark .text-emerald-650 {
+  color: #34d399 !important;
+}
+
