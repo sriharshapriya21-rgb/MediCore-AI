@@ -1,5 +1,12 @@
 # MediCore AI – Enterprise Healthcare Intelligence Platform
 
+
+🔗 **Live Demo:** https://medicore-ai-a4ul.onrender.com
+
+💻 **GitHub Repository:** https://github.com/sriharshapriya21-rgb/MediCore-AI
+
+
+
 A portfolio-grade, recruiter-attractive telemedicine and smart diagnostic support platform. Built to demonstrate enterprise-level frontend orchestration, asynchronous API pipelines, role-based access controllers (RBAC), and bulletproof server-side AI integrations using Gemini.
 
 ---
