@@ -1,8 +1,8 @@
 # MediCore AI – Enterprise Healthcare Intelligence Platform
 
 
-🔗 **Live Demo: (May take ~30 seconds to wake on first visit)
-** https://medicore-ai-a4ul.onrender.com
+🔗 **Live Demo**: (May take ~30 seconds to wake on first visit)
+     https://medicore-ai-a4ul.onrender.com
 
 💻 **GitHub Repository:** https://github.com/sriharshapriya21-rgb/MediCore-AI
 
